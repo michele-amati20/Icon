@@ -10,4 +10,4 @@ Il progetto si propone di facilitare la gestione dei prodotti alimentari present
 
 ### Realizzato dagli studenti
 - Michele Amati, matricola: 716722
-- Agelo Pisciotta, matricola: 758430
+- Angelo Pisciotta, matricola: 758430
