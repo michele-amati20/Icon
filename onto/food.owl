@@ -1,0 +1,1386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/michele/ontologies/2023/9/food#"
+     xml:base="http://www.semanticweb.org/michele/ontologies/2023/9/food"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food">
+        <rdfs:comment>Ontologia per la modellazione del dominio alimentare</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#abbinatoCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#abbinatoCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:comment>Abbinamenti con altri alimenti</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cottoIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cottoIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+        <rdfs:comment>Tipologia di cottura</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#tipoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#tipoDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+        <rdfs:comment>Categoria di appartenenza dell&apos;alimento</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#n_calorie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#n_calorie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Numero di Calorie per 100 grammi di un alimento crudo</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#n_carboidrati -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#n_carboidrati">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Peso in grammi dei carboidrati per 100 grammi di un alimento crudo</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#n_grassi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#n_grassi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Peso in grammi dei grassi per 100 grammi di un alimento crudo</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#n_proteine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#n_proteine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#agnello -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#agnello">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">282</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#bollite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bolliti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#bolliti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#bolliti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#bollito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#brace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#branzino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#branzino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#calamari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#calamari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritti"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#carne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#carote -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">378</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.4</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">328</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cicorie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicorie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#costine_di_maiale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#costine_di_maiale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">370</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#cozze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#cozze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#crudi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#crudi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#farro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#fave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">341</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#filetti_di_tonno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#filetti_di_tonno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">116</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#filetto_di_manzo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#filetto_di_manzo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#forno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#fritte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#fritti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#fritto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.8</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#gamberi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#gamberi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.7</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#hamburger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#hamburger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">353</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#merluzzo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#merluzzo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#padella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#pane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#panino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#panino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#filetti_di_tonno"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#hamburger"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#petto_di_tacchino"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pollo"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#polpo"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#salmone_affumicato"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#salsiccia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#speck"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#panna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#panna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.7</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">374</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.4</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#patate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollite"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritte"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.3</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</n_calorie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#petto_di_tacchino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#petto_di_tacchino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">135</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.4</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.9</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">291</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#legumi"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">317</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#pollo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#pollo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritto"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.6</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#polpo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#polpo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollito"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicorie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#lenticchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#panna"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.6</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#purea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Cottura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">174</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#riso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#risotto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#risotto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#calamari"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#gamberi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#salsiccia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#speck"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carboidrati"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#salmone_affumicato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#salmone_affumicato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#panna"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pesce"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">142</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#salsiccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#salsiccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicorie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fagioli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#insalata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#peperoni"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#brace"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#speck -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#speck">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cicerchie"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fave"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#panna"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piselli"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bolliti"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.9</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#uova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#bollite"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritte"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#derivati_animali"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Tipologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ceci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#purea"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#burrata"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cheddar"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#cous_cous"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#crostini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#farro"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#mozzarella"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#panna"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pasta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#philadelphia"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piadine"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#prosciutto_cotto"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#ricotta"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#uova"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#fritte"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#piastra"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#verdura"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</n_proteine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/michele/ontologies/2023/9/food#petto_d&apos;anatra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/michele/ontologies/2023/9/food#petto_d&apos;anatra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#Alimento"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carote"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#funghi"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pane"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#patate"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#pomodorini"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#riso"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#spinaci"/>
+        <abbinatoCon rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#zucchine"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#forno"/>
+        <cottoIn rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#padella"/>
+        <tipoDi rdf:resource="http://www.semanticweb.org/michele/ontologies/2023/9/food#carne"/>
+        <n_calorie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</n_calorie>
+        <n_carboidrati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</n_carboidrati>
+        <n_grassi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</n_grassi>
+        <n_proteine rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.4</n_proteine>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
