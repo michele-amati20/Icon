@@ -118,8 +118,3 @@ def ricerca_alimento():
     else:
         print("Alimento non presente")
 
-
-if __name__ == '__main__':
-    elimina_alimento()
-    # inserisci_alimento()
-    print(ali_list)

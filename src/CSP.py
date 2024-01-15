@@ -47,13 +47,3 @@ def vincolo_alimento_presente(name):
 
 def vincolo_data_scadenza(name, data_scadenza):
     return data_scadenza == lista_alimenti.ali_list[name] and data_scadenza >= date.today()
-
-
-if __name__ == '__main__':
-    #print(csp())
-    string = "spinaci"
-    print("alimento input:", string)
-    print(csp_alimento_disponibile(string))
-    # csp_alimento_disponibile("pasta")
-    # print(lista_ali_presenti)
-    # print(lista_ali_non_presenti)

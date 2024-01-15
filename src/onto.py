@@ -52,13 +52,3 @@ def query_abbinatoCon_alimento(nome_alimento):
         new_ali.append(str(alimento).replace('food.', ''))
 
     return new_ali
-
-
-if __name__ == '__main__':
-    string = "pizza"
-    print("Alimento considerato:", string)
-    print("Calorie:", query_cal_alimento(string))
-    print("Tipo:", query_tipo_alimento(string))
-    print("Cotture:", query_cottoIn_alimento(string))
-    print("Abbinamenti:", query_abbinatoCon_alimento(string))
-

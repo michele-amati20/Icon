@@ -94,14 +94,6 @@ def raccomanda_alimenti(id):
     return nn(X_scaled, df_scelti_scaled, df_alimenti)
 
 
-if __name__=='__main__':
-    df = carica_dataset_alimenti()
-    dfvoti = carica_dataset_voti()
-    print("Alimenti input")
-    print(alimenti_max_voti(dfvoti, 2))
-
-    print("predizioni", raccomanda_alimenti(2))
-
 
 
 

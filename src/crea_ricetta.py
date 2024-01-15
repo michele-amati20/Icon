@@ -132,7 +132,3 @@ def scegli_cottura(ing):
         return "alla brace"
 
     return scelta
-
-
-if __name__ == '__main__':
-    stampa_ricetta(["pasta", "salsiccia", "funghi", "peperoni"])
