@@ -5,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 def carica_dataset_alimenti():
-    dataset_path = "./dataset/food-dataset.csv"
+    dataset_path = "../dataset/food-dataset.csv"
     df = pd.read_csv(dataset_path)
     return df
 
@@ -28,7 +28,7 @@ def preprocessing_dataset_alimenti(df):
 
 
 def carica_dataset_voti():
-    dataset_voti_path = "./dataset/voti-dataset.csv"
+    dataset_voti_path = "../dataset/voti-dataset.csv"
     df_voti = pd.read_csv(dataset_voti_path)
     return df_voti
 

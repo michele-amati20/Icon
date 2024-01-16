@@ -2,7 +2,7 @@ from owlready2 import get_ontology
 
 
 def carica_ontologia():
-    return get_ontology("./onto/food.owl").load()
+    return get_ontology("../onto/food.owl").load()
 
 
 def query_lista_alimenti():

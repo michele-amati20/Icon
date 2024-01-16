@@ -1,5 +1,5 @@
 import numpy as np
-from datetime import date, datetime
+from datetime import datetime
 from tabulate import tabulate
 import onto
 
@@ -37,11 +37,11 @@ def menu_lista_alimenti():
 
 
 def carica_lista():
-    return np.load("./data/list.npy", allow_pickle=True).item()
+    return np.load("../data/list.npy", allow_pickle=True).item()
 
 
 def salva_lista():
-    np.save("./data/list.npy", ali_list)
+    np.save("../data/list.npy", ali_list)
 
 
 def parse_date(scadenza):
